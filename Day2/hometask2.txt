@@ -1,0 +1,39 @@
+//1. program to find the transpose of a matrix
+
+import java.util.Scanner;
+public class MatrixTranspose {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        int[][] matrix = new int[m][n];  
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++)
+                matrix[i][j] = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++)
+                System.out.print(matrix[j][i] + " ");
+            System.out.println();
+        }
+    }
+}
+
+
+//2. program to check if given number is prime
+
+import java.util.Scanner;
+public class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        boolean isPrime = num > 1 && num % 2 != 0;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        System.out.println(isPrime ? "Prime" : "Not Prime");
+    }
+}
+
