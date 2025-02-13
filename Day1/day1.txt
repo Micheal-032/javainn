@@ -1,1 +1,35 @@
-welcome to day1
+//1. writa program to calculate the area of rectangle
+
+import java.util.Scanner;
+public class RectangleArea {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length: ");
+        double length = sc.nextDouble();
+        System.out.print("Enter width: ");
+        double width = sc.nextDouble();
+        double area = length * width;
+        System.out.println("Area of the rectangle: " + area);
+        sc.close();
+    }
+}
+ 
+//2. program to swap two numbers without using third variable
+
+import java.util.Scanner;
+public class SwapNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);   
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swapping:");
+        System.out.println("First number: " + a);
+        System.out.println("Second number: " + b);
+        sc.close();
+    }
+}
