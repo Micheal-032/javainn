@@ -17,7 +17,7 @@ public class LargestNumber {
     }
 }
 
-//2. program to find the sum of all even numbers up to n
+//2. program to find the sum of all even numbers up to n.
 
 import java.util.Scanner;
 public class SumEvenNumbers {
