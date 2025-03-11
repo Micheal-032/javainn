@@ -1,0 +1,47 @@
+//1.composition
+
+class Battery {
+int capacity;
+Battery(int c) {
+capacity=c;
+}
+void showBattery(){
+System.out.println("battery capacity:"+capacity+" Capacity");
+}}
+class Mobile {
+Battery battery;
+Mobile(int c) {
+battery=new Battery(c);
+}
+void showMobile(){
+System.out.println("mobile has a battery");
+battery.showBattery();
+}}
+public class Main {
+public static void main (String [] args){
+Mobile m=new Mobile(1000);
+m.showMobile();
+}}
+
+//2. aggregation 
+class Employee {
+  String name;
+  Employee(String n) { name = n; }
+}
+class Department {
+  Employee[] emps = new Employee[10];
+  int count;
+  void add(Employee e) { emps[count++] = e; }
+  void show() {
+    for (int i = 0; i < count; i++)
+      System.out.println(emps[i].name);
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    Department d = new Department();
+    d.add(new Employee("John"));
+    d.add(new Employee("Alice"));
+    d.show();
+  }
+}
