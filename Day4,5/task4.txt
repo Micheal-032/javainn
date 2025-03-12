@@ -1,0 +1,28 @@
+class Computer {
+class Processor {
+void show() {
+System.out.println("Processor inside Computer");
+ }
+ }
+void method() {
+class RAM {
+void show() {
+System.out.println("Local Inner Class: RAM inside Computer");
+    }
+   }
+    new RAM().show();
+  }
+}
+public class Main {
+public static void main(String[] args) {
+Computer c = new Computer();
+Computer.Processor p = c.new Processor();
+p.show();
+c.method();
+new Thread(new Runnable() {
+public void run() {
+System.out.println("Anonymous Inner Class: Running Thread");
+          }
+       }).start();
+  }
+}
